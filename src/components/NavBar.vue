@@ -13,7 +13,7 @@ const leftLinks = [
 
 const rightLinks = [
   { to: '/listen', label: 'LISTEN' },
-  { to: '/whats-on', label: "WHAT'S ON" },
+  { to: '/whats-on', label: 'GIGS' },
 ]
 
 const allLinks = [...leftLinks, ...rightLinks]
