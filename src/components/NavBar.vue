@@ -8,6 +8,7 @@ const menuOpen = ref(false)
 const leftLinks = [
   { to: '/', label: 'HOME' },
   { to: '/about', label: 'ABOUT' },
+  { to: '/projects', label: 'PROJECTS' },
 ]
 
 const rightLinks = [
@@ -21,7 +22,7 @@ const baseLinkClass = 'text-gray-500 hover:text-gray-900 transition-colors text-
 const activeLinkClass = 'text-gray-900 border-b border-gray-900'
 
 const linkClass = (path) =>
-  `${baseLinkClass} ${route.path === path ? activeLinkClass : ''}`
+  `${baseLinkClass} ${route.path === path || (path === '/projects' && route.path.startsWith('/projects')) ? activeLinkClass : ''}`
 </script>
 
 <template>

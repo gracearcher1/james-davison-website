@@ -24,8 +24,8 @@ onMounted(async () => {
 </script>
 
 <template>
-  <section class="px-8 py-16">
-    <h2 class="font-playfair text-3xl sm:text-4xl font-semibold text-gray-900 mb-10">What's On</h2>
+  <section class="px-8 pt-8 pb-16">
+    <h2 class="text-sm tracking-widest uppercase text-gray-500 mb-10">What's On</h2>
 
     <div aria-live="polite" aria-atomic="true" class="sr-only">
       {{ statusMessage }}

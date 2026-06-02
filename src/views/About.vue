@@ -5,8 +5,8 @@ usePageTitle('About')
 </script>
 
 <template>
-  <section class="px-8 py-16">
-    <h2 class="font-playfair text-3xl sm:text-4xl font-semibold text-gray-900 mb-10">About</h2>
+  <section class="px-8 pt-8 pb-16">
+    <h2 class="text-sm tracking-widest uppercase text-gray-500 mb-10">About</h2>
     <div class="max-w-2xl space-y-6 text-gray-700 leading-relaxed">
       <p>
         James Davison is a London-based musician and composer whose work spans acoustic songwriting,
