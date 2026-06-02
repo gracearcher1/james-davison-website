@@ -7,7 +7,7 @@ import Footer from './components/Footer.vue'
 <template>
   <a href="#main-content" class="skip-link">Skip to main content</a>
   <NavBar />
-  <main id="main-content" class="pt-20 min-h-screen">
+  <main id="main-content" class="pt-36 min-h-screen">
     <RouterView />
   </main>
   <Footer />

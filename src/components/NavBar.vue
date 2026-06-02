@@ -18,7 +18,7 @@ const rightLinks = [
 
 const allLinks = [...leftLinks, ...rightLinks]
 
-const baseLinkClass = 'text-gray-500 hover:text-gray-900 transition-colors text-xs tracking-widest'
+const baseLinkClass = 'text-gray-500 hover:text-gray-900 transition-colors text-sm tracking-widest font-[family-name:var(--font-yuji)]'
 const activeLinkClass = 'text-gray-900 border-b border-gray-900'
 
 const linkClass = (path) =>
@@ -27,7 +27,7 @@ const linkClass = (path) =>
 
 <template>
   <header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-200">
-    <nav class="px-8 py-4" aria-label="Main navigation">
+    <nav class="px-8 py-14" aria-label="Main navigation">
 
       <!-- Desktop: three-column layout with title centred -->
       <div class="hidden sm:grid grid-cols-3 items-center">
@@ -39,8 +39,8 @@ const linkClass = (path) =>
           </li>
         </ul>
 
-        <RouterLink to="/" class="font-playfair text-xl font-semibold text-gray-900 tracking-wide text-center hover:opacity-60 transition-opacity block">
-          JAMES DAVISON
+        <RouterLink to="/" class="font-[family-name:var(--font-rock3d)] text-4xl text-gray-900 tracking-wide text-center hover:opacity-60 transition-opacity block">
+          James Davison
         </RouterLink>
 
         <ul class="flex gap-8 list-none justify-end" role="list">
@@ -55,7 +55,7 @@ const linkClass = (path) =>
       <!-- Mobile: title left, hamburger right -->
       <div class="flex sm:hidden items-center justify-between">
         <RouterLink to="/" class="font-playfair text-lg font-semibold text-gray-900 tracking-wide hover:opacity-60 transition-opacity">
-          JAMES DAVISON
+          James Davison
         </RouterLink>
         <button
           class="p-2 text-gray-700 hover:text-gray-900"

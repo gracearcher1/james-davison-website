@@ -1,16 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Rock+3D&family=Yuji+Syuku&display=swap');
 @import 'tailwindcss';
 
 @theme {
   --font-playfair: 'Playfair Display', serif;
+  --font-rock3d: 'Rock 3D', serif;
+  --font-yuji: 'Yuji Syuku', serif;
 }
 
 body {
   background-color: white;
-}
-
-h1, h2, h3 {
-  font-family: var(--font-playfair);
 }
 
 .skip-link {

@@ -1,31 +1,36 @@
 <script setup>
-import { ref, onMounted } from 'vue'
-import { usePageTitle } from '../composables/usePageTitle.js'
-import { getUpcomingEvents, formatEventDate } from '../services/calendarService.js'
+import { ref, onMounted } from "vue";
+import { usePageTitle } from "../composables/usePageTitle.js";
+import {
+  getUpcomingEvents,
+  formatEventDate,
+} from "../services/calendarService.js";
 
-usePageTitle("What's On")
+usePageTitle("What's On");
 
-const events = ref([])
-const loading = ref(true)
-const error = ref(false)
-const statusMessage = ref('Loading events')
+const events = ref([]);
+const loading = ref(true);
+const error = ref(false);
+const statusMessage = ref("Loading events");
 
 onMounted(async () => {
   try {
-    events.value = await getUpcomingEvents()
-    statusMessage.value = `${events.value.length} upcoming events loaded`
+    events.value = await getUpcomingEvents();
+    statusMessage.value = `${events.value.length} upcoming events loaded`;
   } catch {
-    error.value = true
-    statusMessage.value = 'Failed to load events'
+    error.value = true;
+    statusMessage.value = "Failed to load events";
   } finally {
-    loading.value = false
+    loading.value = false;
   }
-})
+});
 </script>
 
 <template>
   <section class="px-8 pt-8 pb-16">
-    <h2 class="text-sm tracking-widest uppercase text-gray-500 mb-10">What's On</h2>
+    <h2 class="text-sm tracking-widest uppercase text-gray-500 mb-10">
+      Upcoming Gigs
+    </h2>
 
     <div aria-live="polite" aria-atomic="true" class="sr-only">
       {{ statusMessage }}
@@ -37,24 +42,34 @@ onMounted(async () => {
       Unable to load events. Please check back soon.
     </p>
 
-    <ul v-else-if="events.length" class="space-y-6 list-none max-w-2xl" role="list">
+    <ul
+      v-else-if="events.length"
+      class="space-y-6 list-none max-w-2xl"
+      role="list"
+    >
       <li
         v-for="event in events"
         :key="event.id"
         class="border-b border-gray-200 pb-6 last:border-b-0"
       >
-        <p class="text-xs text-gray-400 uppercase tracking-widest mb-1">{{ formatEventDate(event) }}</p>
-        <h3 class="font-playfair text-xl font-semibold text-gray-900 mb-1">{{ event.summary }}</h3>
-        <p v-if="event.location" class="text-gray-500 text-sm mb-3">{{ event.location }}</p>
+        <p class="text-xs text-gray-400 uppercase tracking-widest mb-1">
+          {{ formatEventDate(event) }}
+        </p>
+        <h3 class="font-[family-name:var(--font-yuji)] text-xl text-gray-900 mb-1 tracking-widest">
+          {{ event.summary }}
+        </h3>
+        <p v-if="event.location" class="text-gray-500 text-sm mb-3">
+          {{ event.location }}
+        </p>
         <a
-          v-if="event.htmlLink && event.htmlLink !== '#'"
-          :href="event.htmlLink"
+          v-if="event.description"
+          :href="event.description"
           target="_blank"
           rel="noopener noreferrer"
           :aria-label="`More info about ${event.summary} (opens in new tab)`"
           class="text-xs uppercase tracking-wide text-gray-600 hover:text-gray-900 border-b border-gray-300 hover:border-gray-900 transition-colors pb-px"
         >
-          More info
+          More info &amp; tickets
         </a>
       </li>
     </ul>
