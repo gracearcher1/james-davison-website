@@ -23,7 +23,7 @@ onMounted(async () => {
 <template>
   <div class="py-4 px-2 space-y-1 sm:space-y-2">
     <!-- Row 1 -->
-    <div class="relative flex items-end gap-1">
+    <!-- <div class="relative flex items-end gap-1">
       <div class="flex-1 overflow-hidden">
         <img
           class="h-24 w-full object-cover object-top shadow-md sm:h-44"
@@ -42,17 +42,17 @@ onMounted(async () => {
           src="/images/photo-2.png"
           alt=""
         />
-      </div>
-      <!-- <div
+      </div> -->
+    <!-- <div
         class="absolute inset-0 bg-black/80 flex items-center justify-center gap-3 sm:gap-6"
       >
         <p class="text-white font-playfair text-2xl font-medium">
           Trumpet player, composer and teacher based in London
         </p>
       </div> -->
-    </div>
+    <!-- </div> -->
 
-    <!-- Row 2 -->
+    <!-- Pictures -->
     <div class="flex items-center gap-1">
       <div class="flex-1 overflow-hidden">
         <img
@@ -75,7 +75,7 @@ onMounted(async () => {
       </div>
     </div>
 
-    <!-- Row 3 -->
+    <!-- Upcoming Gigs -->
     <div class="relative flex items-start gap-1 pt-8">
       <div class="flex-1 overflow-hidden">
         <img
@@ -99,7 +99,9 @@ onMounted(async () => {
       <div
         class="absolute inset-0 bg-black/80 flex flex-col items-center justify-center gap-4 px-6 mt-8"
       >
-        <h2 class="font-[family-name:var(--font-rock3d)] text-2xl text-white sm:text-3xl tracking-widest">
+        <h2
+          class="font-[family-name:var(--font-rock3d)] text-2xl text-white sm:text-3xl tracking-widest"
+        >
           Upcoming Gigs
         </h2>
         <div
