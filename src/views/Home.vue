@@ -8,7 +8,7 @@ usePageTitle();
 <template>
   <section class="px-8 py-24 sm:py-32">
     <p class="text-gray-600 text-lg sm:text-xl max-w-xl leading-relaxed mb-10">
-      the man and the legend.... blah blah
+      Trumpet/Flugelhorn, Composer, ...
     </p>
     <div class="flex flex-wrap gap-4">
       <RouterLink
